@@ -18,14 +18,9 @@ pipeline {
          stage('Build docker image') {
              steps {
                  echo 'running unittest'
-                 sh 'docker build -t myregistry.local/myapp:"$BUILD_NUMBER"'
+                 sh 'docker build -t myregistry.local/myapp:"$BUILD_NUMBER" .'
            }
         } 
-        stage('Createdockerimage') {
-            steps {
-                echo 'creating docker image'
                 
-            }
-        }
     }
 }    
