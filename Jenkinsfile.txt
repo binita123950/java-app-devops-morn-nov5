@@ -55,6 +55,7 @@ pipeline {
 		 '''
            }
         } 
+ }
  	post { 
         always { 
             echo 'Build completed, now clearing the workspace'
@@ -64,8 +65,7 @@ pipeline {
 }
 	failure {
 	echo "Build failed"
-}
-    }	     
+     }	     
    
     }
 }    
